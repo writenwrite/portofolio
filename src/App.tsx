@@ -1,15 +1,24 @@
+import { lazy, Suspense, type ReactNode } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import type { ReactNode } from 'react'
 import Layout from './components/Layout'
 import ScrollToTop from './components/ScrollToTop'
-import Home from './pages/Home'
-import About from './pages/About'
-import Projects from './pages/Projects'
-import Contact from './pages/Contact'
-import Blog from './pages/Blog'
-import CV from './pages/CV'
-import NotFound from './pages/NotFound'
+
+const Home = lazy(() => import('./pages/Home'))
+const About = lazy(() => import('./pages/About'))
+const Projects = lazy(() => import('./pages/Projects'))
+const Contact = lazy(() => import('./pages/Contact'))
+const Blog = lazy(() => import('./pages/Blog'))
+const CV = lazy(() => import('./pages/CV'))
+const NotFound = lazy(() => import('./pages/NotFound'))
+
+function Loader() {
+  return (
+    <div className="page-loader">
+      <div className="loader-spinner" />
+    </div>
+  )
+}
 
 function PageTransition({ children }: { children: ReactNode }) {
   return (
@@ -31,17 +40,19 @@ function App() {
     <Layout>
       <ScrollToTop />
       <AnimatePresence mode="wait">
-        <PageTransition key={location.pathname}>
-          <Routes location={location}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/cv" element={<CV />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </PageTransition>
+        <Suspense fallback={<Loader />}>
+          <PageTransition key={location.pathname}>
+            <Routes location={location}>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/cv" element={<CV />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </PageTransition>
+        </Suspense>
       </AnimatePresence>
     </Layout>
   )

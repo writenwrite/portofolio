@@ -4,6 +4,7 @@ import Footer from './Footer'
 import CustomCursor from './CustomCursor'
 import Background from './Background'
 import ScrollProgress from './ScrollProgress'
+import BackToTop from './BackToTop'
 import './Layout.css'
 
 interface LayoutProps {
@@ -17,6 +18,7 @@ function Layout({ children }: LayoutProps) {
       <div className="bg-grid" />
       <CustomCursor />
       <ScrollProgress />
+      <BackToTop />
       <Navbar />
       <main className="main-content">{children}</main>
       <Footer />
