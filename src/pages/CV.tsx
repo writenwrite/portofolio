@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import SEO from '../components/SEO'
-import { AnimatedSection, StaggerContainer, StaggerItem } from '../components/Animations'
+import { AnimatedSection, StaggerContainer, StaggerItem } from '../components/Animations';
 import './CV.css'
 
 interface ExperienceItem {
@@ -17,13 +17,11 @@ interface EducationItem {
 }
 
 const experience: ExperienceItem[] = [
-  { role: 'Senior Developer', company: 'Tech Corp', period: '2024 - Present', desc: 'Leading frontend architecture and mentoring junior developers.' },
-  { role: 'Full-Stack Developer', company: 'StartUp Inc', period: '2022 - 2024', desc: 'Built and maintained multiple client-facing web applications.' },
-  { role: 'Junior Developer', company: 'Web Agency', period: '2020 - 2022', desc: 'Developed responsive websites and contributed to internal tools.' },
+  { role: 'Front-End Developer', company: 'Baby Shop E-Commerce', period: 'Recent', desc: 'Built front-end interface for an e-commerce baby shop website.' },
 ]
 
 const education: EducationItem[] = [
-  { degree: 'B.Sc. Computer Science', school: 'University Name', period: '2016 - 2020' },
+  { degree: 'S1 Teknik Informatika', school: 'University (Semester 5)', period: 'Present' },
 ]
 
 function CV() {

@@ -3,7 +3,7 @@ import SEO from '../components/SEO'
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../components/Animations'
 import './About.css'
 
-const skills = ['JavaScript/TypeScript', 'React/Next.js', 'Node.js', 'Python', 'Tailwind CSS', 'Docker', 'PostgreSQL', 'Git', 'REST APIs', 'GraphQL']
+const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Git']
 
 function About() {
   return (
@@ -37,12 +37,13 @@ function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p>
-              Hello! I'm a passionate developer with experience building web applications.
-              I love turning complex problems into simple, beautiful, and intuitive solutions.
+              I'm a beginner in the world of development, trying to learn new knowledge
+              by becoming a developer. I believe all knowledge returns to human civilization —
+              where it makes things easier, does not complicate, and can be accessed by anyone.
             </p>
             <p>
-              When I'm not coding, you'll find me exploring new technologies, writing technical
-              blog posts, or contributing to open-source projects.
+              Currently studying S1 Informatics Engineering in my 5th semester,
+              and exploring modern web technologies along the way.
             </p>
             <h3>Skills & Technologies</h3>
             <StaggerContainer className="skills-list">
@@ -61,8 +62,8 @@ function About() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <div className="about-placeholder">
-              <span>📸</span>
-              <p>Your Photo</p>
+              <span>👤</span>
+              <p>Photo (optional)</p>
             </div>
           </motion.div>
         </div>

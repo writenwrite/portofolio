@@ -5,7 +5,7 @@ import SEO from '../components/SEO'
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../components/Animations'
 import './Home.css'
 
-const roles = ['Full-Stack Developer', 'UI/UX Enthusiast', 'Open Source Lover']
+const roles = ['Newbie in Developer', 'Front-End Enthusiast']
 
 function Typewriter({ words }: { words: string[] }) {
   const [text, setText] = useState('')
@@ -49,7 +49,7 @@ function Home() {
     <>
       <SEO
         title="Home"
-        desc="Novan - Full-Stack Developer. Portfolio website with projects, blog, and contact."
+        desc="Novan Y - Newbie in Developer. Portfolio website with projects, blog, and contact."
         path="/"
       />
       <motion.section className="hero" style={{ y: heroY }}>
@@ -60,7 +60,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Hi, I'm
+            Hello, I'm
           </motion.span>
           <motion.h1
             className="hero-name"
@@ -84,8 +84,9 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
           >
-            I build accessible, performant web applications with modern technologies.
-            Passionate about clean code and great user experiences.
+            A beginner in the world of development, learning new things every day.
+            I believe knowledge returns to human civilization — making things easier,
+            not complicated, and accessible to everyone.
           </motion.p>
           <motion.div
             className="hero-actions"
@@ -132,23 +133,23 @@ function Home() {
           <StaggerContainer className="highlights-grid">
             <StaggerItem whileHover={{ y: -8 }} transition={{ duration: 0.3 }}>
               <div className="card highlight-card">
-                <span className="highlight-icon">⚛️</span>
+                <span className="highlight-icon">🌐</span>
                 <h3>Frontend</h3>
-                <p>React, Next.js, Vue, TypeScript, Tailwind CSS</p>
+                <p>HTML, CSS, JavaScript, React, Tailwind CSS</p>
               </div>
             </StaggerItem>
             <StaggerItem whileHover={{ y: -8 }} transition={{ duration: 0.3 }}>
               <div className="card highlight-card">
-                <span className="highlight-icon">⚙️</span>
-                <h3>Backend</h3>
-                <p>Node.js, Express, Python, PostgreSQL, MongoDB</p>
+                <span className="highlight-icon">📚</span>
+                <h3>Learning</h3>
+                <p>Currently diving deeper into React & modern web development</p>
               </div>
             </StaggerItem>
             <StaggerItem whileHover={{ y: -8 }} transition={{ duration: 0.3 }}>
               <div className="card highlight-card">
-                <span className="highlight-icon">☁️</span>
-                <h3>DevOps</h3>
-                <p>Docker, AWS, CI/CD, Linux, Nginx</p>
+                <span className="highlight-icon">🎯</span>
+                <h3>Goal</h3>
+                <p>Build accessible, user-friendly apps that make a difference</p>
               </div>
             </StaggerItem>
           </StaggerContainer>
