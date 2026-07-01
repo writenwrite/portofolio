@@ -1,0 +1,153 @@
+.ai-fab {
+  position: fixed;
+  bottom: 92px;
+  right: 32px;
+  z-index: 998;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(108, 99, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-fab:hover {
+  background: var(--accent-hover);
+}
+
+.ai-panel {
+  position: fixed;
+  bottom: 156px;
+  right: 32px;
+  z-index: 998;
+  width: 360px;
+  max-height: 500px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.ai-close {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.ai-close:hover {
+  background: var(--bg-secondary);
+}
+
+.ai-body {
+  flex: 1;
+  padding: 14px 18px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 340px;
+}
+
+.ai-msg {
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  max-width: 85%;
+  word-wrap: break-word;
+}
+
+.ai-msg.user {
+  background: var(--accent);
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.ai-msg.assistant {
+  background: var(--bg-secondary);
+  color: var(--text);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.ai-msg.typing {
+  opacity: 0.6;
+}
+
+.ai-footer {
+  display: flex;
+  gap: 8px;
+  padding: 12px 18px;
+  border-top: 1px solid var(--border);
+}
+
+.ai-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  background: var(--input-bg);
+  color: var(--text);
+  outline: none;
+  font-family: inherit;
+}
+
+.ai-input:focus {
+  border-color: var(--accent);
+}
+
+.ai-send {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-send:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ai-send:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+@media (max-width: 480px) {
+  .ai-panel {
+    right: 12px;
+    left: 12px;
+    width: auto;
+    bottom: 140px;
+  }
+}
