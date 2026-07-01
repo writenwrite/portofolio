@@ -1,0 +1,17 @@
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+* {
+  cursor: none;
+}
+
+a, button, input, textarea, .card, .skill-tag {
+  cursor: none;
+}

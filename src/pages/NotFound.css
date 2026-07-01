@@ -1,0 +1,30 @@
+.not-found {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.not-found-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.not-found-code {
+  font-size: 8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), #8b5cf6, #06b6d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+.not-found-desc {
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
