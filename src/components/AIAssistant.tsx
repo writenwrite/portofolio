@@ -43,10 +43,13 @@ function AIAssistant() {
 
     try {
       const res = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${import.meta.env.VITE_GEMINI_KEY}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent`,
         {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: {
+            'Content-Type': 'application/json',
+            'X-goog-api-key': import.meta.env.VITE_GEMINI_KEY,
+          },
           body: JSON.stringify({
             contents: [{
               parts: [{
